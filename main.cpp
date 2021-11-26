@@ -1,5 +1,5 @@
-/*
-  FICHA 5 PROGRAMACAO
+
+// FICHA 5 PROGRAMACAO
 
 // EX 1
 #include <iostream>
@@ -75,6 +75,6 @@ int main(void) {
     delete [] a;
     return 0;
 }
-*/
+
 
 // EX 4
