@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ficha5.dir/main.cpp.o  -o ficha5 

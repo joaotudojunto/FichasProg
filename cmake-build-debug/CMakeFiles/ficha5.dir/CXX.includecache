@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/joaod/Desktop/ficha5/main.cpp
+iostream
+-
+iostream
+-
+climits
+-
+algorithm
+-
+iostream
+-
+
