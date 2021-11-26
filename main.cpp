@@ -78,3 +78,77 @@ int main(void) {
 */
 
 // EX 4
+
+#include <climits>
+
+template <typename T>
+T max_value(const T arr[], int n) {
+    T max = INT_MIN;
+    int i;
+    for(i =0; i < n; i++){
+        if(arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+
+}
+
+template <typename T>
+void norm_values(T arr[], int n, T min, T max) {
+    int i;
+    for(i =0; i < n; i++){
+        if(arr[i] > max){
+            arr[i] = max;
+        }else if(arr[i] < min){
+            arr[i] = min;
+        }
+    }
+}
+
+#include <iostream>
+
+    int main(void) {
+
+        int iarr[6] = {2, -1, 2, 5, 1, 4};
+
+        std::cout << "Os valores guardados no array são: " << std::endl;
+        for(int i : iarr){
+            std::cout << i << std::endl;
+        }
+
+        int imax = max_value(iarr, 6);
+        norm_values(iarr, 6, 0, 3);
+        std::cout << "max_value: O valor máximo no array COM INT é: " << imax << std::endl;
+
+
+
+        std::cout << "Os valores NORMALIZADOS no array sao:" << std::endl;
+        for(int i : iarr){
+            std::cout << i << std::endl;
+        }
+//------------------------------------------------------------------------------------------------------------
+// DOUBLE
+//------------------------------------------------------------------------------------
+
+
+        double darr[6] = {-1.2, 0.5, 1.3, 3.2, -0.7, 1.1};
+
+        std::cout << "Os valores guardados no array COM DOUBLES são: " << std::endl;
+        for(double i : darr){
+            std::cout << i << std::endl;
+        }
+
+        double dmax = max_value(darr, 6);
+        norm_values(darr, 6, -1.0, 1.0);
+        std::cout << "max_value: O valor máximo no array COM DOUBLE é: " << dmax << std::endl;
+
+
+        std::cout << "Os valores NORMALIZADOS no array COM DOUBLE sao:" << std::endl;
+        for(double i : darr){
+            std::cout << i << std::endl;
+        }
+
+
+        return 0;
+    }
+
